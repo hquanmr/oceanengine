@@ -1,5 +1,5 @@
 {
-    "name": "hquanmr/oceanengine",//必须要名字
+    "name": "hquanmr/oceanengine",
     "description": "oceanengine sdk",
     "type": "library",
     "license": "mit",
