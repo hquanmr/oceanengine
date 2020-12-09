@@ -1,4 +1,12 @@
 {
+    "name": "hquanmr/oceanengine",//必须要名字
+    "description": "oceanengine sdk",
+    "type": "library",
+    "license": "mit",
+    "authors": [{
+        "name": "hquanmr",
+        "email": "2976930785" 
+    }],
     "require": {
         "leo108/php_sdk_skeleton": "^0.0.1",
         "psr/simple-cache": "^1.0",
@@ -6,7 +14,7 @@
         "monolog/monolog": "^2.1",
         "symfony/cache": "^5.2"
     },
-        "autoload": {
+    "autoload": {
         "psr-4": {
             "MySkeleton\\": "src/"
         }
