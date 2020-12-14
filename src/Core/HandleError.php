@@ -7,12 +7,13 @@ use Exception;
 class HandleError
 {
 
-    public static function handlerExceptions(Exception $e)
+    public static function handlerExceptions(Exception $exception)
     {
         try {
-            //
+            throw $exception;
         } catch (Exception $e) {
-            throw $e;
+            echo $e->getMessage();
+            die();
 
         }
     }
