@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 $config = [
-    'app_id'  => '1680943468006411',
-    'secrets' => '41f630565a9052caf7996069394b613f9638f43d',
+    'app_id'  => '*',
+    'secrets' => '*',
     'log'     => [
         'path' => 'ad.log',
         'format' => '
@@ -15,8 +15,6 @@ $config = [
 
 
 
-$app  = new MySkeleton\Application($config);
+// $app  = new MySkeleton\Application($config);
 
-$code = $_GET['auth_code'];
-
-var_dump($app->creative->getCreative('1671991554024462'));
+// $code = $_GET['auth_code'];
