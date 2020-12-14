@@ -12,7 +12,7 @@ use Leo108\SDK\Middleware\MiddlewareInterface;
 use MySkeleton\Core\Exceptions\ApiException;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Leo108\SDK\HandleError;
+use MySkeleton\Core\HandleError;
 class CheckApiResponseMiddleware implements MiddlewareInterface
 {
     /**

@@ -19,8 +19,7 @@ class AccessToken extends BaseApi
         $cache    = $this->getApp()->getCache();
 
         if ($refresh || !$ret = $cache->get($cacheKey)) {
-            var_dump($refresh);
-              var_dump($cache->get($cacheKey));exit();
+
             $retdata = $this->getTokenFromRefreshToken();
             $this->setToken($retdata);
             return $retdata['access_token'];
@@ -48,7 +47,9 @@ class AccessToken extends BaseApi
             'Content-Type' => 'application/json',
         ]]));
         if (empty($ret['data']['access_token'])) {
-            $this->getApp()->handlerExceptions(new GetAccessTokenException('get AccessToken fail. response: ' . json_encode($ret, JSON_UNESCAPED_UNICODE)));
+
+            call_user_func([HandleError::class, 'handlerExceptions'], new GetAccessTokenException('get AccessToken fail. response: ' . json_encode($ret, JSON_UNESCAPED_UNICODE)));
+
         }
 
         $this->setToken($ret['data']);
@@ -68,7 +69,7 @@ class AccessToken extends BaseApi
             'Content-Type' => 'application/json',
         ]]));
         if (empty($ret['data']['access_token'])) {
-            $this->getApp()->handlerExceptions(new GetAccessTokenException('get AccessToken fail. response: ' . json_encode($ret, JSON_UNESCAPED_UNICODE)));
+            call_user_func([HandleError::class, 'handlerExceptions'], new GetAccessTokenException('get AccessToken fail. response: ' . json_encode($ret, JSON_UNESCAPED_UNICODE)));
         }
 
         return $ret['data'];
