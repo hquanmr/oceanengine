@@ -1,4 +1,13 @@
 {
+    "name": "hquanmr/oceanengine",
+    "description": "oceanengine sdk",
+    "version": "0.0.1",
+    "license": "mit",
+    "authors": [{
+        "name": "hquanmr",
+        "email": "2976930785@qq.com" 
+    }],
+    "minimum-stability": "dev",
     "require": {
         "leo108/php_sdk_skeleton": "^0.0.1",
         "psr/simple-cache": "^1.0",
@@ -6,7 +15,7 @@
         "monolog/monolog": "^2.1",
         "symfony/cache": "^5.2"
     },
-        "autoload": {
+    "autoload": {
         "psr-4": {
             "MySkeleton\\": "src/"
         }
